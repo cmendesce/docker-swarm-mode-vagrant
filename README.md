@@ -2,29 +2,22 @@
 
 This project is to similify the setup for [Docker Swarm Mode][1] with Vagrant.
 
-It will automatically create a swarm cluster of Docker, and the first node will be the manager and others will be worker.
+It will automatically create a swarm cluster of Docker, and the first node will be the manager (called ```manager```) and others will be worker (```node-1``` and ```node-2```).
 
 
 # Usage
 
-For user in China, you can uncomment the following line in "provision-manager.sh", "provision-worker.sh" for using the [Aliyun Mirrors](http://mirrors.aliyun.com) to speed up the package installation/update.
-
-    #USE_ALIYUN_MIRROR=1
-
-
 This application is available in the form of a Docker image that you can run as a container by executing this command:
-    
-    vagrant up
 
-
+Just run ```vagrant up``` and the virtual machines will be available in your environment.
 
 # Play with it
 
 Run the Swarm manager 
 
-	vagrant ssh node-1
+```vagrant ssh manager```
 
-
+### Useful commands
 ```
 docker info
 docker node ls
